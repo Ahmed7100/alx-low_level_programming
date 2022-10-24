@@ -6,7 +6,7 @@
  * Return: length of @s
  */
 
-int _strlrn(char *s)
+int _strlen(char *s)
 {
 	int i;
 
