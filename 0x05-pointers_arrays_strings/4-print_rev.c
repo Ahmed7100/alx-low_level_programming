@@ -2,7 +2,7 @@
 
 /**
  * print_rev - print a reverse of a string
- * @s:String to print in reverse 
+ * @s:String to print in reverse
  * Return:0
  */
 
