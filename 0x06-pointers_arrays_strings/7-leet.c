@@ -5,7 +5,7 @@
  * @n: input
  * Return: the value of n
  */
-char *leet(char *n)
+char *leet(char *)
 {
 	int i, j;
 	char s1[] = "aAeEoOtTlL";
@@ -17,7 +17,7 @@ char *leet(char *n)
 		{
 			if (n[i] == s1[j])
 			{
-				n[i] = s2[j]
+				n[i] = s2[j];
 			}
 		}
 	}
