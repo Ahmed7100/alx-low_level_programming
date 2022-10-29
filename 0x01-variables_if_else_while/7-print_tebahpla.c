@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
  * main - printint a-z
@@ -13,6 +13,6 @@ int main(void)
 	{
 		putchar(i);
 	}
-	putchar('n');
+	putchar('\n');
 	return (0);
 }
