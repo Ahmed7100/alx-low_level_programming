@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 			for (j = 0; j < length; j++)
 			{
-				if (isdigit(*(ptr * j)) == 0)
+				if (isdigit(*(ptr + j)) == 0)
 				{
 					printf("Error\n");
 					return (1);
