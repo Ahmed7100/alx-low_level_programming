@@ -1,14 +1,15 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
  * main - prints the minimum number of coins
- * to make change for an amount of money.
- * @argc: holds the number of argument passed
+ *        to make change for an amount of money.
+ *
+ * @argc: holds the number of arguments passed
  * @argv: array pointer that holds the arguments passed
  *
  * Return: Always 0 (Success)
- */
+*/
 
 int main(int argc, char *argv[])
 {
@@ -37,7 +38,6 @@ int main(int argc, char *argv[])
 			coins_number += 1;
 		}
 	}
-
-	printf("%d\n", coins_numbr);
+	printf("%d\n", coins_number);
 	return (0);
 }
