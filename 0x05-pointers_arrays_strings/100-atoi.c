@@ -1,51 +1,37 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _atoi - convert string to integer
- * @s:string to be converted
- * Return:0 or converted int
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
  */
-
 int _atoi(char *s)
 {
-	int i, first, res;
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	i = 0;
-	first = 0;
-	res = 1;
-	while (s[i])
+	while (*(s + count) != '\0')
 	{
-		if (s[i] == '-')
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
+
+		if (*(s + count) == '-')
+			pn *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
 		{
-			res = res * -1;
-		} else if (s[i] == '+')
-		{
-			res = res * 1;
+			if (size > 0)
+				m *= 10;
+			size++;
 		}
-		if ((s[i] >= '0' && s[i] <= '9'))
-		{
-			if (first == 0)
-			{
-				res = res * (s[i]n - 48);
-			} else if (first == 1)
-			{
-				if (res * 10 < o)
-				{
-					res = res * 10 - (s[i] - 48);
-				} else
-				{
-					res = res * 10 + (s[i] - 48);
-				}
-			}
-			first = 1;
-			if ((s[i + 1] >= '0' && s[i + 1] <= '9') == 0)
-			{
-				break;
-			}
-		}
-		i++;
+		count++;
 	}
-	return ((first == 0) ? 0 : res);
+
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (oi * pn);
 }
 
